@@ -12,9 +12,25 @@ function setup() {
 function draw() {
   // put drawing code here
   background(0);
+  movePad();
   ball.show();
   pad1.show();
   pad2.show();
+}
+
+function movePad() {
+  if(keyIsDown(UP_ARROW)) {
+    pad2.y -= 5;
+  }
+  if(keyIsDown(DOWN_ARROW)) {
+    pad2.y += 5;
+  }
+  if(keyIsDown(83)) {
+    pad1.y += 5;
+  }
+  if(keyIsDown(87)) {
+    pad1.y -= 5;
+  }
 }
 
 class Ball {
